@@ -16,7 +16,7 @@
 <?php 
     extract($_POST);
     if($_POST["gelen"] == "1")
-    { 
+    {
         $topla = $sayi1 + $sayi2;
         $cikar = $sayi1 - $sayi2;
         $carp = $sayi1 * $sayi2;
@@ -24,12 +24,14 @@
     }
 ?>
 
-    <center>
-        <h1 class="mt-3">PHP İLE 4 İŞLEM YAPIMI</h1>
-    </center>
-    <hr>
+    
+
     <div class="container">
         <div class="row">
+            <div style="text-align: center;" class="col-12">
+                <h1 class="mt-3">PHP İLE 4 İŞLEM YAPIMI</h1>
+            </div>
+
             <div class="col-6">
                 <form action="" method="post">
                     <div class="form-group">
