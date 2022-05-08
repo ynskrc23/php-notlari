@@ -21,8 +21,7 @@ $egtimciler = $sorgu->fetchAll(PDO::FETCH_ASSOC);
 
 <div class="container">
     <div class="row">
-        <?php if($egtimciler): ?>
-            <table class="table table-hover ">
+        <table class="table table-hover ">
             <thead class="thead-default">
                 <tr>
                     <th scope="col">#</th>
@@ -36,7 +35,8 @@ $egtimciler = $sorgu->fetchAll(PDO::FETCH_ASSOC);
                 </tr>
             </thead>
             <tbody>
-            <?php foreach($egtimciler as $egtimci): ?>
+            <?php if($egtimciler): ?>
+                <?php foreach($egtimciler as $egtimci): ?>
                 <tr>
                     <th scope="row"><?php echo $egtimci["egtimci_id"]; ?></th>
                     <td><?php echo $egtimci["egtimci_adi"]; ?></td>
@@ -58,14 +58,12 @@ $egtimciler = $sorgu->fetchAll(PDO::FETCH_ASSOC);
                     </td>
                     <td></td>
                 </tr>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <td colspan="6" class="text-center">Henüz görüntülenecek veri yok</td>
+            <?php endif; ?>
             </tbody>
         </table>
-        <?php else: ?>
-            <div>
-                Henüz sisteme kayıtlı egtimci yok!
-            </div>
-        <?php endif; ?>
     </div>
 </div>
 
