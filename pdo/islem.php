@@ -27,10 +27,11 @@ if(isset($_POST["ekle"]) == "1" && $id == "")
         $ekle = $query->execute([
             $egtimci_adi, $egtimci_cv, $egtimci_dersi, $egtimci_durum
         ]);
+        $last_id = $db->lastInsertId();
 
         if($ekle){
             echo "Ekleme işlemi başarılı";
-            header( "refresh:2;url=index.php" );
+            header( "refresh:2;url=detay.php?id=".$last_id);
         }
         else{
             $hata = $query->errorInfo();
