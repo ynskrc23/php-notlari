@@ -1,7 +1,10 @@
 <?php
 require_once "db.php";
 
-$sorgu = $db->prepare("SELECT * from egtimci inner join dersler on egtimci.egtimci_dersi = dersler.ders_id WHERE egtimci_id = ?");
+$sorgu = $db->prepare("SELECT * from egtimci 
+inner join dersler on egtimci.egtimci_dersi = dersler.ders_id 
+WHERE egtimci_id = ? 
+order by egtimci_id");
 $sorgu->execute([$_GET["id"]]);
 
 $egtimci = $sorgu->fetch(PDO::FETCH_ASSOC);

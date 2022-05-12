@@ -30,6 +30,7 @@ if(isset($_POST["ekle"]) == "1" && $id == "")
 
         if($ekle){
             echo "Ekleme işlemi başarılı";
+            header( "refresh:2;url=index.php" );
         }
         else{
             $hata = $query->errorInfo();
@@ -67,6 +68,7 @@ if(isset($_POST["edit"]) == "2" && $id != "")
 
     if($edit){
         echo "Düzenleme işlemi başarılı";
+        header( "refresh:2;url=ekle.php?id=".$id);
     }
     else{
         $hata = $query->errorInfo();
