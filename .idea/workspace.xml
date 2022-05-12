@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea4651e-0dd5-458c-9c43-fc7928005b16" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/operatorler/php-operatorler.php" beforeDir="false" afterPath="$PROJECT_DIR$/operatorler/php-operatorler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdo/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdo/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
       <workItem from="1651968206347" duration="389000" />
       <workItem from="1652039633305" duration="302000" />
       <workItem from="1652300012173" duration="5039000" />
-      <workItem from="1652375350468" duration="2587000" />
+      <workItem from="1652375350468" duration="4464000" />
     </task>
     <servers />
   </component>

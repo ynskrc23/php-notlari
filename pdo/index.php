@@ -1,12 +1,16 @@
 <?php
 require_once "db.php";
 
-$sorgu = $db->query('SELECT * from egtimci 
-inner join dersler on egtimci.egtimci_dersi = dersler.ders_id
-order by egtimci_id');
+$parametre = 'SELECT * from egtimci 
+inner join dersler on egtimci.egtimci_dersi = dersler.ders_id';
+if(isset($_GET['ara'])){
+    $parametre .= ' where egtimci.egtimci_adi like "%'.$_GET['ara'].'%"' ;
+}
+$parametre .= ' order by egtimci_id';
+$sorgu = $db->query($parametre);
+
 
 $egtimciler = $sorgu->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -22,6 +26,10 @@ $egtimciler = $sorgu->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
 <div class="container">
+    <form action="" method="get" class="mt-3 mb-3">
+        <label>Ara:</label>
+        <input type="text" name="ara" value="<?php echo isset($_GET['ara']) ? $_GET['ara'] : ''; ?>">
+    </form>
     <div class="row">
         <table class="table table-hover ">
             <thead class="thead-default">
