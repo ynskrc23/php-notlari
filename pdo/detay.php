@@ -1,7 +1,7 @@
 <?php
 require_once "db.php";
 
-$sorgu = $db->prepare("SELECT * from egtimci WHERE egtimci_id = ?");
+$sorgu = $db->prepare("SELECT * from egtimci inner join dersler on egtimci.egtimci_dersi = dersler.ders_id WHERE egtimci_id = ?");
 $sorgu->execute([$_GET["id"]]);
 
 $egtimci = $sorgu->fetch(PDO::FETCH_ASSOC);
@@ -30,6 +30,10 @@ $egtimci = $sorgu->fetch(PDO::FETCH_ASSOC);
             <li class="list-group-item active">İsim</li>
             <li class="list-group-item">
                 <?php echo $egtimci["egtimci_adi"]; ?>
+            </li>
+            <li class="list-group-item active">Ders</li>
+            <li class="list-group-item">
+                <?php echo $egtimci["ders_adi"]; ?>
             </li>
             <li class="list-group-item active">CV</li>
             <li class="list-group-item">

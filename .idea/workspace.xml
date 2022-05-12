@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea4651e-0dd5-458c-9c43-fc7928005b16" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdo/detay.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdo/detay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdo/ekle.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdo/ekle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdo/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdo/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +62,10 @@
       <workItem from="1651920233964" duration="8678000" />
       <workItem from="1651929541419" duration="4908000" />
       <workItem from="1651956681221" duration="4898000" />
-      <workItem from="1651968206347" duration="306000" />
+      <workItem from="1651968206347" duration="389000" />
+      <workItem from="1652039633305" duration="302000" />
+      <workItem from="1652300012173" duration="5039000" />
+      <workItem from="1652375350468" duration="1624000" />
     </task>
     <servers />
   </component>

@@ -1,10 +1,9 @@
 <?php
 require_once "db.php";
 
-$sorgu = $db->prepare("SELECT * from egtimci");
-$sorgu->execute();
-
+$sorgu = $db->query('SELECT * from egtimci inner join dersler on egtimci.egtimci_dersi = dersler.ders_id');
 $egtimciler = $sorgu->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -26,6 +25,7 @@ $egtimciler = $sorgu->fetchAll(PDO::FETCH_ASSOC);
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">İsim</th>
+                    <th scope="col">Ders</th>
                     <th scope="col">Durum</th>
                     <th scope="col">Kayıt Tarihi</th>
                     <th scope="col">İşlemler</th>
@@ -40,6 +40,7 @@ $egtimciler = $sorgu->fetchAll(PDO::FETCH_ASSOC);
                 <tr>
                     <th scope="row"><?php echo $egtimci["egtimci_id"]; ?></th>
                     <td><?php echo $egtimci["egtimci_adi"]; ?></td>
+                    <td><?php echo $egtimci["ders_adi"]; ?></td>
                     <td>
                         <?php
                             if($egtimci["egtimci_durum"] == 1){

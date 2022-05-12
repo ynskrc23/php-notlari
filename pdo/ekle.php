@@ -23,11 +23,13 @@ if(!empty($_GET["id"])){
 <body>
 
 <div class="container">
-    <div class="col-md-6 offset-md-3">
-        <div style="text-align: center;">
-            <h1 class="mt-3">PDO İşlemleri</h1>
-        </div>
+    <div class="text-center mt-3">
+        <h4>PDO İşlemleri</h4>
+        <a href="index.php">Anasayfaya Dön</a>
+    </div>
+    <hr>
 
+    <div class="col-md-6 offset-md-4">
         <div class="row">
             <form action="islem.php" method="post">
                 <label>Adı</label>
@@ -43,6 +45,16 @@ if(!empty($_GET["id"])){
                 <label>Ders</label>
                 <select class="form-control" name="egtimci_dersi" id="egtimci_dersi">
                     <option value="">Ders seciniz</option>
+                    <?php
+                    $sorgu = $db->prepare("SELECT * from dersler");
+                    $sorgu->execute();
+
+                    $dersler = $sorgu->fetchAll(PDO::FETCH_ASSOC);
+                    foreach ($dersler as $ders): ?>
+                        <option value="<?php echo $ders["ders_id"]; ?>" <?php echo $ders["ders_id"] == $egtimci["egtimci_dersi"] ? 'selected' : ''; ?>>
+                            <?php echo $ders["ders_adi"]; ?>
+                        </option>
+                    <?php endforeach; ?>
                 </select>
                 <br>
 
