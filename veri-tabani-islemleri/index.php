@@ -2,6 +2,7 @@
     require_once "baglan.php";
 
     $gelen = "8";
+    //veri kayıt işlemi
     if($gelen == "1")
     {
         //insert işlemi
@@ -32,6 +33,7 @@
         //end insert işlemi
     }
 
+    //veri güncelleme işlemi
     if($gelen == "2")
     {
         //update işlemi
@@ -58,6 +60,7 @@
         //end update işlemi
     }
 
+    //veri silme işlemi
     if($gelen == "3")
     {
         //delete işlemi
@@ -75,6 +78,7 @@
         //end delete işlemi
     }
 
+    //veri listeleme işlemi
     if($gelen == 4)
     {
         //veri listeleme işlemi
